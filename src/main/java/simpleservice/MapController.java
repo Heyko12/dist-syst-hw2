@@ -3,12 +3,13 @@ package simpleservice;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @RestController
+@RequestMapping("/map")
 public class MapController {
-    private final Map<String, String> store = new HashMap<>();
+    private final Map<String, String> store = new ConcurrentHashMap<>();
 
     @PostMapping("/put")
     public ResponseEntity<String> put(@RequestParam String key, @RequestParam String value) {
