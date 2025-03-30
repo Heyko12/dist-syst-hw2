@@ -13,7 +13,7 @@ cd load_testing && jmeter -n -t db.jmx -l db_results.jtl && jmeter -g db_results
 
 , можно обнаружить в созданной командой выше папке report_folder файл index.html с примерно таким отчетом от jmeter:
 
-![Пример отчёта](https://github.com/Heyko12/dist-syst-hw2/check/master/images/image1.jpg)
+![Пример отчёта](https://github.com/Heyko12/dist-syst-hw2/tree/check/images/image1.jpg)
 
 Размер теста был найден эмпирически (чтобы тесты крутились не слишком долго, но запускали все потоки и throughput не изменялся при увеличении размера теста). Не совсем поняла как собирать утилизацию jmeter-ом плагином PerfMon, или любым другим, поэтому просто звала top, и смотрела что утилизация достаточно высока.
 
